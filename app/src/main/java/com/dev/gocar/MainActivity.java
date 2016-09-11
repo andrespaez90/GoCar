@@ -21,7 +21,7 @@ import com.dev.gocar.ui.model.ShowCaseModel;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener , HeaderHomeView.OnHeaderClickListener{
+        implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener, HeaderHomeView.OnHeaderClickListener{
 
 
     private ActivityMainBinding binding;
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity
 
         showRoomPager.setAdapter(viewPagerAdapter);
 
-        showRoomPager.setPageTransformer(false, new CubeInTransformer());
+        showRoomPager.setPageTransformer(false, new ForegroundToBackgroundTransformer());
 
         showRoomPager.addOnPageChangeListener(this);
 
