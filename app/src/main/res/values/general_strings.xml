@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="copy_favorites">Favoritos</string>
+    <string name="copy_used">Usados</string>
+    <string name="copy_brands">Marcas</string>
+    <string name="copy_buy">Comprar</string>
+    <string name="copy_guest">Invitado</string>
+
+</resources>
