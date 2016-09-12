@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView_item_case"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height_used_show_case"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/side_nav_bar"
+            android:orientation="vertical"
+            android:layout_alignBottom="@+id/imageView_item_case">
+
+            <TextView
+                android:id="@+id/textView_car_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                tools:text="Tyoe Car"/>
+
+            <TextView
+                android:id="@+id/textView_car_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_light"
+                tools:text="$130.000"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

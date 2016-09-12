@@ -1,4 +1,12 @@
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'android-apt'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io" }
+}
+
 
 buildscript {
     repositories {
@@ -15,9 +23,6 @@ buildscript {
     }
 }
 
-apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
-
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.0"
@@ -27,7 +32,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 24
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.2"
     }
     buildTypes {
         release {
@@ -47,4 +52,17 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.0'
     compile 'com.android.support:support-v4:24.2.0'
     compile 'com.android.support:design:24.2.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.2@aar') {
+        transitive = true;
+    }
+    compile('com.crashlytics.sdk.android:crashlytics-ndk:1.1.4@aar') {
+        transitive = true;
+    }
+}
+
+crashlytics {
+    enableNdk true
+    androidNdkOut 'src/main/obj'
+    androidNdkLibsOut 'src/main/libs'
 }

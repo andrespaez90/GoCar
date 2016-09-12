@@ -7,18 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.dev.gocar.databinding.FragmentShowcaseBinding;
+import com.dev.gocar.databinding.FragmentShowCaseBinding;
 
-public class ShowCaseFragment extends Fragment {
+public class ShowCase extends Fragment {
 
     private String title;
 
     private int backgorund;
 
-    private FragmentShowcaseBinding binding;
+    private FragmentShowCaseBinding binding;
 
-    public static ShowCaseFragment newInstance(String title, int resource) {
-        ShowCaseFragment showCase = new ShowCaseFragment();
+    public static ShowCase newInstance(String title, int resource) {
+        ShowCase showCase = new ShowCase();
         showCase.title = title;
         showCase.backgorund = resource;
         return showCase;
@@ -27,7 +27,7 @@ public class ShowCaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentShowcaseBinding.inflate(inflater, container, false);
+        binding = FragmentShowCaseBinding.inflate(inflater, container, false);
 
         setView();
 

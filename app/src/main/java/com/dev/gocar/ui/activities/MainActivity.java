@@ -1,4 +1,4 @@
-package com.dev.gocar;
+package com.dev.gocar.ui.activities;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -10,14 +10,16 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.crashlytics.android.Crashlytics;
+import com.crashlytics.android.ndk.CrashlyticsNdk;
+import com.dev.gocar.R;
 import com.dev.gocar.databinding.ActivityMainBinding;
-import com.dev.gocar.ui.HeaderHomeView;
-import com.dev.gocar.ui.Pagertansformer.CubeInTransformer;
-import com.dev.gocar.ui.Pagertansformer.ForegroundToBackgroundTransformer;
-import com.dev.gocar.ui.Pagertansformer.TabletTransformer;
+import com.dev.gocar.ui.widgets.HeaderHomeView;
+import com.dev.gocar.ui.Pagertansformer.SlideOverTransformer;
 import com.dev.gocar.ui.adapter.ShowRoomAdapter;
 import com.dev.gocar.ui.model.ShowCaseModel;
 
+import io.fabric.sdk.android.Fabric;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics(), new CrashlyticsNdk());
 
         init();
 
@@ -55,13 +58,9 @@ public class MainActivity extends AppCompatActivity
 
         drawer = binding.drawerLayout;
 
-        ShowRoomAdapter viewPagerAdapter = new ShowRoomAdapter(getSupportFragmentManager(), getOnShowRoomContent());
+        showRoomPager.setAdapter(new ShowRoomAdapter(getSupportFragmentManager(), getOnShowRoomContent()));
 
-        showRoomPager.setAdapter(viewPagerAdapter);
-
-        showRoomPager.setPageTransformer(false, new ForegroundToBackgroundTransformer());
-
-        showRoomPager.addOnPageChangeListener(this);
+        showRoomPager.setPageTransformer(false, new SlideOverTransformer());
 
         headerHomeView.setTitle(showRoomInfo.get(0).getTitle());
     }
@@ -71,6 +70,8 @@ public class MainActivity extends AppCompatActivity
         headerHomeView.setHeaderListener(this);
 
         binding.navView.setNavigationItemSelectedListener(this);
+
+        showRoomPager.addOnPageChangeListener(this);
     }
 
     @Override
@@ -112,9 +113,13 @@ public class MainActivity extends AppCompatActivity
 
         showRoomInfo = new ArrayList<>();
 
-        showRoomInfo.add(new ShowCaseModel("Audi A6",R.drawable.ic_menu_camera));
+        showRoomInfo.add(new ShowCaseModel("Audi A6",R.drawable.showcase_01));
 
-        showRoomInfo.add(new ShowCaseModel("Corsa",R.drawable.ic_menu_gallery));
+        showRoomInfo.add(new ShowCaseModel("Corsa",R.drawable.showcase_02));
+
+        showRoomInfo.add(new ShowCaseModel("Audi A6",R.drawable.showcase_01));
+
+        showRoomInfo.add(new ShowCaseModel("Corsa",R.drawable.showcase_02));
 
         return showRoomInfo;
     }

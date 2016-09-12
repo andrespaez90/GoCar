@@ -12,21 +12,21 @@
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
+        android:background="@color/gray_second"
         android:fitsSystemWindows="true"
-        tools:context="com.dev.gocar.MainActivity">
+        tools:context=".ui.activities.MainActivity">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager_showRoom"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <com.dev.gocar.ui.HeaderHomeView
+        <com.dev.gocar.ui.widgets.HeaderHomeView
             android:id="@+id/header_home_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_medium"
-            android:elevation="@dimen/spacing_small"/>
+            android:elevation="@dimen/spacing_small" />
 
 
         <android.support.design.widget.FloatingActionButton

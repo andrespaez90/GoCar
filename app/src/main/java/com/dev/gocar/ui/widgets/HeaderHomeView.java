@@ -1,4 +1,4 @@
-package com.dev.gocar.ui;
+package com.dev.gocar.ui.widgets;
 
 import android.content.Context;
 import android.support.v7.widget.Toolbar;

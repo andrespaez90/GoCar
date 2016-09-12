@@ -5,8 +5,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.dev.gocar.R;
 import com.dev.gocar.ui.model.ShowCaseModel;
-import com.dev.gocar.ui.showroom.ShowCaseFragment;
+import com.dev.gocar.ui.showroom.UsedShowCase;
+import com.dev.gocar.ui.showroom.ShowCase;
 
 import java.util.ArrayList;
 
@@ -17,6 +19,7 @@ public class ShowRoomAdapter extends FragmentPagerAdapter {
     public ShowRoomAdapter(FragmentManager fm, ArrayList<ShowCaseModel> showCases) {
         super(fm);
         this.showCasesModels = showCases;
+        this.showCasesModels.add(new ShowCaseModel("Carros Usados", R.drawable.showcase_02));
     }
 
     @Override
@@ -24,9 +27,13 @@ public class ShowRoomAdapter extends FragmentPagerAdapter {
 
         ShowCaseModel showCasePage;
 
-        if (showCasesModels != null && showCasesModels.size() > position) {
+        if (showCasesModels != null && showCasesModels.size() - 1 > position) {
             showCasePage = showCasesModels.get(position);
-            return ShowCaseFragment.newInstance(showCasePage.getTitle(), showCasePage.getImage());
+            return ShowCase.newInstance(showCasePage.getTitle(), showCasePage.getImage());
+        }
+
+        if (showCasesModels != null && position == showCasesModels.size() - 1) {
+            return new UsedShowCase();
         }
 
         return null;
