@@ -1,13 +1,17 @@
 package com.dev.gocar.ui.adapter;
 
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.dev.gocar.databinding.ItemUsedShowCaseBinding;
+import com.dev.gocar.ui.activities.DetailCarActivity;
 import com.dev.gocar.ui.model.UsedShowCaseModel;
 import com.squareup.picasso.Picasso;
 
@@ -48,6 +52,8 @@ public class UsedShowCaseAdapter extends RecyclerView.Adapter<UsedShowCaseAdapte
         binding = ItemUsedShowCaseBinding.inflate(inflater, viewGroup, true);
 
         DataViewHolder tvh = new DataViewHolder(binding, mContext);
+
+
 
         return tvh;
     }
@@ -97,11 +103,18 @@ public class UsedShowCaseAdapter extends RecyclerView.Adapter<UsedShowCaseAdapte
 
             binding.textViewCarPrice.setText(String.valueOf(showCaseModel.getPrice()));
 
+            binding.imageViewItemCase.setOnClickListener(this);
+
             Picasso.with(mContext).load(showCaseModel.getImage()).into(binding.imageViewItemCase);
         }
 
         @Override
         public void onClick(View v) {
+
+            Intent intent = new Intent(mContext, DetailCarActivity.class);
+            intent.putExtra(DetailCarActivity.URL_IMAGE, showCaseModel.getImage());
+            ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) mContext, binding.imageViewItemCase, "image_car");
+            mContext.startActivity(intent, options.toBundle());
         }
     }
 }

@@ -2,6 +2,11 @@
     android:shape="rectangle">
     <gradient
         android:angle="90"
-        android:endColor="#749c9b9b"
-        android:startColor="#9c9b9b" />
+        android:endColor="#743e3e3e"
+        android:startColor="#292929" />
+
+
+    <corners
+        android:topLeftRadius="@dimen/spacing_medium"
+        android:topRightRadius="@dimen/spacing_medium"/>
 </shape>

@@ -3,9 +3,9 @@ package com.dev.gocar.ui.activities;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.view.ViewPager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -14,13 +14,14 @@ import com.crashlytics.android.Crashlytics;
 import com.crashlytics.android.ndk.CrashlyticsNdk;
 import com.dev.gocar.R;
 import com.dev.gocar.databinding.ActivityMainBinding;
-import com.dev.gocar.ui.widgets.HeaderHomeView;
 import com.dev.gocar.ui.Pagertansformer.SlideOverTransformer;
 import com.dev.gocar.ui.adapter.ShowRoomAdapter;
 import com.dev.gocar.ui.model.ShowCaseModel;
+import com.dev.gocar.ui.widgets.HeaderHomeView;
+
+import java.util.ArrayList;
 
 import io.fabric.sdk.android.Fabric;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener, HeaderHomeView.OnHeaderClickListener{
