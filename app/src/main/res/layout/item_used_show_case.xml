@@ -20,7 +20,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/side_nav_bar"
+            android:background="@drawable/bg_black_information"
             android:orientation="vertical"
             android:layout_alignBottom="@+id/imageView_item_case">
 

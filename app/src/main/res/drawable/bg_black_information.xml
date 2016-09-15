@@ -7,6 +7,6 @@
 
 
     <corners
-        android:topLeftRadius="@dimen/spacing_medium"
-        android:topRightRadius="@dimen/spacing_medium"/>
+        android:topLeftRadius="@dimen/spacing_xlarge"
+        android:topRightRadius="@dimen/spacing_xlarge"/>
 </shape>

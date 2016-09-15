@@ -1,4 +1,4 @@
-package com.dev.gocar.ui.showroom;
+package com.dev.gocar.ui.widgets.showroom;
 
 
 import android.os.Bundle;

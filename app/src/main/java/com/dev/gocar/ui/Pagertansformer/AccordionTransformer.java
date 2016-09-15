@@ -1,4 +1,4 @@
-package com.dev.gocar.ui.Pagertansformer;
+package com.dev.gocar.ui.pagertansformer;
 
 
 import android.view.View;

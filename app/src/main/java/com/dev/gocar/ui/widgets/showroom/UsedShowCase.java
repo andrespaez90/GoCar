@@ -1,4 +1,4 @@
-package com.dev.gocar.ui.showroom;
+package com.dev.gocar.ui.widgets.showroom;
 
 
 import android.os.Bundle;
@@ -8,7 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dev.gocar.R;
 import com.dev.gocar.databinding.FragmentCarListBinding;
+import com.dev.gocar.ui.Itemdecoration.ItemDecorationColumns;
 import com.dev.gocar.ui.adapter.UsedShowCaseAdapter;
 import com.dev.gocar.ui.model.UsedShowCaseModel;
 
@@ -83,6 +85,11 @@ public class UsedShowCase extends ShowCase {
         carlist.setAdapter(listAdapter);
 
         carlist.setLayoutManager(new GridLayoutManager(getContext(), 2));
+
+
+        carlist.addItemDecoration(new ItemDecorationColumns(
+                getResources().getDimensionPixelSize(R.dimen.spacing_smaller),
+                2));
 
     }
 

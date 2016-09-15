@@ -14,7 +14,7 @@ import com.crashlytics.android.Crashlytics;
 import com.crashlytics.android.ndk.CrashlyticsNdk;
 import com.dev.gocar.R;
 import com.dev.gocar.databinding.ActivityMainBinding;
-import com.dev.gocar.ui.Pagertansformer.SlideOverTransformer;
+import com.dev.gocar.ui.pagertansformer.SlideOverTransformer;
 import com.dev.gocar.ui.adapter.ShowRoomAdapter;
 import com.dev.gocar.ui.model.ShowCaseModel;
 import com.dev.gocar.ui.widgets.HeaderHomeView;

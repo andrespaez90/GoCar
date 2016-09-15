@@ -7,8 +7,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.dev.gocar.R;
 import com.dev.gocar.ui.model.ShowCaseModel;
-import com.dev.gocar.ui.showroom.UsedShowCase;
-import com.dev.gocar.ui.showroom.ShowCase;
+import com.dev.gocar.ui.widgets.showroom.UsedShowCase;
+import com.dev.gocar.ui.widgets.showroom.ShowCase;
 
 import java.util.ArrayList;
 
