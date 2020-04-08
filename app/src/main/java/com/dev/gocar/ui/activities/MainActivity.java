@@ -1,13 +1,12 @@
 package com.dev.gocar.ui.activities;
 
-import android.databinding.DataBindingUtil;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
+
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.crashlytics.android.Crashlytics;
@@ -18,6 +17,8 @@ import com.dev.gocar.ui.pagertansformer.SlideOverTransformer;
 import com.dev.gocar.ui.adapter.ShowRoomAdapter;
 import com.dev.gocar.ui.model.ShowCaseModel;
 import com.dev.gocar.ui.widgets.HeaderHomeView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
@@ -63,14 +64,14 @@ public class MainActivity extends AppCompatActivity
 
         showRoomPager.setPageTransformer(false, new SlideOverTransformer());
 
-        headerHomeView.setTitle(showRoomInfo.get(0).getTitle());
+//        headerHomeView.setTitle(showRoomInfo.get(0).getTitle());
     }
 
     private void addListener(){
 
         headerHomeView.setHeaderListener(this);
 
-        binding.navView.setNavigationItemSelectedListener(this);
+        //binding.navView.setNavigationItemSelectedListener(this);
 
         showRoomPager.addOnPageChangeListener(this);
     }
@@ -114,13 +115,13 @@ public class MainActivity extends AppCompatActivity
 
         showRoomInfo = new ArrayList<>();
 
-        showRoomInfo.add(new ShowCaseModel("Audi A6",R.drawable.showcase_01));
+        //showRoomInfo.add(new ShowCaseModel("Audi A6",R.drawable.showcase_01));
 
-        showRoomInfo.add(new ShowCaseModel("Corsa",R.drawable.showcase_02));
+        //showRoomInfo.add(new ShowCaseModel("Corsa",R.drawable.showcase_02));
 
-        showRoomInfo.add(new ShowCaseModel("Audi A6",R.drawable.showcase_01));
+        //showRoomInfo.add(new ShowCaseModel("Audi A6",R.drawable.showcase_01));
 
-        showRoomInfo.add(new ShowCaseModel("Corsa",R.drawable.showcase_02));
+        //showRoomInfo.add(new ShowCaseModel("Corsa",R.drawable.showcase_02));
 
         return showRoomInfo;
     }

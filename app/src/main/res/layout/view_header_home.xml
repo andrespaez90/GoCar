@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -23,7 +24,7 @@
             android:layout_centerVertical="true"
             android:clickable="true"
             android:contentDescription="@string/app_name"
-            android:src="@mipmap/logo_header" />
+            app:srcCompat="@mipmap/logo_header" />
 
         <TextView
             android:id="@+id/textView_title"
@@ -41,7 +42,7 @@
             android:layout_centerVertical="true"
             android:clickable="true"
             android:contentDescription="@string/app_name"
-            android:src="@mipmap/ic_grid" />
+            app:srcCompat="@mipmap/ic_grid" />
 
         <ImageView
             android:id="@+id/imageView_search"
@@ -52,7 +53,7 @@
             android:layout_toStartOf="@+id/imageView_grid"
             android:clickable="true"
             android:contentDescription="@string/app_name"
-            android:src="@mipmap/ic_search" />
+            app:srcCompat="@mipmap/ic_search" />
 
     </RelativeLayout>
 

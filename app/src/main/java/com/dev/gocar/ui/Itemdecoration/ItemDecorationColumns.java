@@ -2,8 +2,9 @@ package com.dev.gocar.ui.Itemdecoration;
 
 
 import android.graphics.Rect;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class ItemDecorationColumns extends RecyclerView.ItemDecoration {
 

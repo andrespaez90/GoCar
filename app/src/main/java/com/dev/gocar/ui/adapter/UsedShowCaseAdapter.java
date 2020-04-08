@@ -4,11 +4,12 @@ package com.dev.gocar.ui.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.dev.gocar.databinding.ItemUsedShowCaseBinding;
 import com.dev.gocar.ui.activities.DetailCarActivity;
@@ -52,7 +53,6 @@ public class UsedShowCaseAdapter extends RecyclerView.Adapter<UsedShowCaseAdapte
         binding = ItemUsedShowCaseBinding.inflate(inflater, viewGroup, true);
 
         DataViewHolder tvh = new DataViewHolder(binding, mContext);
-
 
 
         return tvh;
@@ -110,7 +110,6 @@ public class UsedShowCaseAdapter extends RecyclerView.Adapter<UsedShowCaseAdapte
 
         @Override
         public void onClick(View v) {
-
             Intent intent = new Intent(mContext, DetailCarActivity.class);
             intent.putExtra(DetailCarActivity.URL_IMAGE, showCaseModel.getImage());
             ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) mContext, binding.imageViewItemCase, "image_car");

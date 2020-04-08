@@ -1,10 +1,11 @@
 package com.dev.gocar.ui.widgets;
 
 import android.content.Context;
-import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+
+import androidx.appcompat.widget.Toolbar;
 
 import com.dev.gocar.R;
 import com.dev.gocar.databinding.ViewHeaderHomeBinding;
@@ -42,7 +43,7 @@ public class HeaderHomeView extends Toolbar implements View.OnClickListener {
     }
 
 
-    public void setHeaderListener(OnHeaderClickListener listener){
+    public void setHeaderListener(OnHeaderClickListener listener) {
         heaerListener = listener;
     }
 
@@ -61,11 +62,11 @@ public class HeaderHomeView extends Toolbar implements View.OnClickListener {
 
         int viewId = view.getId();
 
-        switch (viewId){
+        switch (viewId) {
             case R.id.imageView_logo:
-                 if(heaerListener != null){
-                     heaerListener.onLogoClick();
-                 }
+                if (heaerListener != null) {
+                    heaerListener.onLogoClick();
+                }
         }
 
     }
