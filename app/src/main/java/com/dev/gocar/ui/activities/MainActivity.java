@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity
 
         showRoomPager.setPageTransformer(false, new SlideOverTransformer());
 
-//        headerHomeView.setTitle(showRoomInfo.get(0).getTitle());
+        headerHomeView.setTitle(showRoomInfo.get(0).getTitle());
     }
 
     private void addListener(){
@@ -115,13 +115,13 @@ public class MainActivity extends AppCompatActivity
 
         showRoomInfo = new ArrayList<>();
 
-        //showRoomInfo.add(new ShowCaseModel("Audi A6",R.drawable.showcase_01));
+        showRoomInfo.add(new ShowCaseModel("Audi A6",R.drawable.show_case_01));
 
-        //showRoomInfo.add(new ShowCaseModel("Corsa",R.drawable.showcase_02));
+        showRoomInfo.add(new ShowCaseModel("Corsa",R.drawable.show_case_02));
 
-        //showRoomInfo.add(new ShowCaseModel("Audi A6",R.drawable.showcase_01));
+        showRoomInfo.add(new ShowCaseModel("Audi A6",R.drawable.show_case_01));
 
-        //showRoomInfo.add(new ShowCaseModel("Corsa",R.drawable.showcase_02));
+        showRoomInfo.add(new ShowCaseModel("Corsa",R.drawable.show_case_02));
 
         return showRoomInfo;
     }

@@ -18,7 +18,7 @@ public class ShowRoomAdapter extends FragmentPagerAdapter {
     public ShowRoomAdapter(FragmentManager fm, ArrayList<ShowCaseModel> showCases) {
         super(fm);
         this.showCasesModels = showCases;
-        //this.showCasesModels.add(new ShowCaseModel("Carros Usados", R.drawable.showcase_02));
+        this.showCasesModels.add(new ShowCaseModel("Carros Usados", R.drawable.show_case_02));
     }
 
     @Override
